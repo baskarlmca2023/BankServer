@@ -2,8 +2,7 @@ import mongoose from "mongoose";
 
 const DBconfig = async () => {
     try {
-        // await mongoose.connect('mongodb://localhost/bank')
-        await mongoose.connect('mongodb://127.0.0.1:27017/')
+     await mongoose.connect('mongodb+srv://baskar_l:baskar@cluster0.e5zjhnp.mongodb.net/')
         console.log("DB connected");
     } catch (error) {
         console.log("couldn't connect DB", error);
