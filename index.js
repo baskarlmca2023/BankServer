@@ -6,7 +6,12 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Middleware setup
-app.use(cors());
+app.use(cors(
+   {
+  origin: ['https://bankapplication-0imc.onrender.com'], 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}
+));
 app.use(express.json());
 
 // Routes
